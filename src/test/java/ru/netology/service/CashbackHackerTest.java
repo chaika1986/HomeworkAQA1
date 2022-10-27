@@ -8,7 +8,7 @@ public class CashbackHackerTest {
 
     @Test
     void shouldWriteAmountBeforeBoundary() {
-        CashbackHacker service = new CashbackHacker();
+        CashbackHackService service = new CashbackHackService();
         int expected = 200;
         int actual = service.remain(800);
 
@@ -17,7 +17,7 @@ public class CashbackHackerTest {
 
     @Test
     void shouldWriteAmountAfterBoundary() {
-        CashbackHacker service = new CashbackHacker();
+        CashbackHackService service = new CashbackHackService();
         int expected = 900;
         int actual = service.remain(1100);
 
@@ -27,7 +27,7 @@ public class CashbackHackerTest {
     @Test
 
     void shouldWriteAmountIsBoundary() {
-        CashbackHacker service = new CashbackHacker();
+        CashbackHackService service = new CashbackHackService();
         int expected = 0;
         int actual = service.remain(1000);
 
